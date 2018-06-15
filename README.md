@@ -2,6 +2,7 @@ Python Grouper
 ===================
 
 return groups of huge data to process in small chunk.
+EXA: igroup('ABCDEFG', 2) --> iter[(A, B), (C,D), (E, F), (G,)]
 
 DynamicDjangoFilter
 ===================
