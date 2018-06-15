@@ -1,3 +1,8 @@
+Python Grouper
+===================
+
+return groups of huge data to process in small chunk.
+
 DynamicDjangoFilter
 ===================
 
