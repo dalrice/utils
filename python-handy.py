@@ -16,3 +16,10 @@ def run_parallel(*fns):
             for f in fs:
                 yield f.result()
     return tuple(helper())
+
+class DecimalEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, decimal.Decimal):
+            return float(obj)
+        return json.JSONEncoder.default(self, obj)
+json_dumps = DecimalEncoder().encode
