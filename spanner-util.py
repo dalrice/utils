@@ -64,24 +64,10 @@ class SpannerDB(Enum):
             )
 
 
-class ProductDetail(SpannerDB):
-    sku_config = _Type(str, '', '')
-    product_detail_en = _Type(json.dumps, None, None)
-    product_detail_ar = _Type(json.dumps, None, None)
+class Detail(SpannerDB):
+    key_config = _Type(str, '', '')
+    key_en = _Type(json.dumps, None, None)
+    key_ar = _Type(json.dumps, None, None)
     updated_at = _Type(date, spanner.COMMIT_TIMESTAMP, spanner.COMMIT_TIMESTAMP)
 
 
-class Product(SpannerDB):
-    sku = _Type(str, '', '')
-    sku_old = _Type(str, '', '')
-    sku_config = _Type(str, '', '')
-    is_active = _Type(bool, False, False)
-    brand_code = _Type(str, None, None)
-    image_key = _Type(str, None, None)
-    model_name_number = _Type(str, None, None)
-    sizing_standard = _Type(str, None, None)
-    url = _Type(str, None, None)
-    variant_sort = _Type(int, None, None)
-    product_group_code = _Type(str, None, None)
-    product_group_variant_meta = _Type(str, None, None)
-    updated_at = _Type(date, spanner.COMMIT_TIMESTAMP, spanner.COMMIT_TIMESTAMP)
