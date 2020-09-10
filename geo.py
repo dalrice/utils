@@ -44,7 +44,7 @@ def get_path_from_h3(h3id, color="0xFF0000AA",
 def get_static_map(h3ids, res=7, size="500x500"):
     zoom = ZOOM_MAP.get(res, 14)
     map_config = MAP_CONFIG.format(size=size, zoom=zoom)
-    params = [map_config, "key=AIzaSyDCce7ZDWT6OmSjx5m3TEVuqCBtquGIavw"]
+    params = [map_config, "key=sdfasf"]
     for h3id in h3ids:
         params.append(get_path_from_h3(h3id))
     map_param = "&".join(params)
